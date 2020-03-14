@@ -37,7 +37,7 @@ def decryption(ciphertext, repeated_key):
 
     for x,y in zip(ciphertext_pos, key_pos):
         difference = x - y
-        if difference <= 0:
+        if difference < 0:
             difference = difference + 26
         plaintext_pos.append(difference)
 
